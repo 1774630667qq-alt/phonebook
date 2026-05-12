@@ -1,202 +1,225 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/admin_page"
-    android:clipToPadding="false"
-    android:fillViewport="true"
-    android:overScrollMode="never"
-    android:paddingStart="20dp"
-    android:paddingTop="18dp"
-    android:paddingEnd="20dp"
-    android:paddingBottom="22dp"
-    android:scrollbars="none">
+    android:orientation="vertical"
+    android:background="@color/admin_page">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
-
-            <Button
-                android:id="@+id/btnCloseEditor"
-                android:layout_width="82dp"
-                android:layout_height="42dp"
-                android:background="@drawable/button_secondary_bg"
-                android:text="@string/back"
-                android:textAllCaps="false"
-                android:textColor="@color/admin_primary"
-                android:textSize="15sp" />
-
-            <TextView
-                android:id="@+id/tvTitle"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:text="@string/edit_contact"
-                android:textColor="@color/admin_text"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/admin_section_bg"
-            android:padding="16dp"
-            android:layout_marginBottom="14dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/basic_info"
-                android:textColor="@color/admin_text"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="14dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/name"
-                android:textColor="@color/admin_text_muted"
-                android:textSize="14sp"
-                android:layout_marginBottom="6dp" />
-
-            <EditText
-                android:id="@+id/etName"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:inputType="text"
-                android:textColor="@color/admin_text"
-                android:textColorHint="@color/admin_text_muted"
-                android:background="@drawable/admin_input_bg"
-                android:textSize="17sp"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp"
-                android:hint="@string/contact_name_hint"
-                android:singleLine="true"
-                android:layout_marginBottom="14dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/phone"
-                android:textColor="@color/admin_text_muted"
-                android:textSize="14sp"
-                android:layout_marginBottom="6dp" />
-
-            <EditText
-                android:id="@+id/etPhone"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:inputType="phone"
-                android:textColor="@color/admin_text"
-                android:textColorHint="@color/admin_text_muted"
-                android:background="@drawable/admin_input_bg"
-                android:textSize="17sp"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp"
-                android:hint="@string/phone_hint"
-                android:singleLine="true"
-                android:layout_marginBottom="14dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/relationship"
-                android:textColor="@color/admin_text_muted"
-                android:textSize="14sp"
-                android:layout_marginBottom="6dp" />
-
-            <EditText
-                android:id="@+id/etRelationship"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:inputType="text"
-                android:textColor="@color/admin_text"
-                android:textColorHint="@color/admin_text_muted"
-                android:background="@drawable/admin_input_bg"
-                android:textSize="17sp"
-                android:paddingStart="14dp"
-                android:paddingEnd="14dp"
-                android:hint="@string/relationship_hint"
-                android:singleLine="true" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/admin_section_bg"
-            android:padding="16dp"
-            android:layout_marginBottom="18dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/media_info"
-                android:textColor="@color/admin_text"
-                android:textSize="17sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="14dp" />
-
-            <Button
-                android:id="@+id/btnSelectPhoto"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:background="@drawable/button_secondary_bg"
-                android:text="@string/select_photo"
-                android:textAllCaps="false"
-                android:textColor="@color/admin_text"
-                android:textSize="16sp"
-                android:layout_marginBottom="12dp" />
-
-            <Button
-                android:id="@+id/btnSelectVoice"
-                android:layout_width="match_parent"
-                android:layout_height="54dp"
-                android:background="@drawable/button_secondary_bg"
-                android:text="@string/select_audio"
-                android:textAllCaps="false"
-                android:textColor="@color/admin_text"
-                android:textSize="16sp" />
-
-        </LinearLayout>
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@color/admin_panel">
 
         <Button
-            android:id="@+id/btnSaveContact"
-            android:layout_width="match_parent"
-            android:layout_height="58dp"
-            android:background="@drawable/button_primary_bg"
-            android:text="@string/save"
+            android:id="@+id/btnCloseEditor"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/button_secondary_bg"
+            android:text="@string/back"
             android:textAllCaps="false"
-            android:textColor="@color/text_primary"
+            android:textColor="@color/admin_primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:includeFontPadding="false"
+            android:text="@string/edit_contact"
+            android:textColor="@color/admin_text"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="10dp" />
-
-        <Button
-            android:id="@+id/btnDeleteContact"
-            android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:background="@drawable/button_danger_bg"
-            android:text="@string/delete_contact"
-            android:textAllCaps="false"
-            android:textColor="@color/danger"
-            android:textSize="16sp"
-            android:visibility="gone" />
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-</ScrollView>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="14dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/admin_section_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/basic_info"
+                    android:textColor="@color/admin_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/name"
+                    android:textColor="@color/admin_text_muted"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="5dp" />
+
+                <EditText
+                    android:id="@+id/etName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:inputType="text"
+                    android:textColor="@color/admin_text"
+                    android:textColorHint="@color/admin_text_muted"
+                    android:background="@drawable/admin_input_bg"
+                    android:textSize="15sp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:hint="@string/contact_name_hint"
+                    android:singleLine="true"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/phone"
+                    android:textColor="@color/admin_text_muted"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="5dp" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:inputType="phone"
+                    android:textColor="@color/admin_text"
+                    android:textColorHint="@color/admin_text_muted"
+                    android:background="@drawable/admin_input_bg"
+                    android:textSize="15sp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:hint="@string/phone_hint"
+                    android:singleLine="true"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/relationship"
+                    android:textColor="@color/admin_text_muted"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="5dp" />
+
+                <EditText
+                    android:id="@+id/etRelationship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:inputType="text"
+                    android:textColor="@color/admin_text"
+                    android:textColorHint="@color/admin_text_muted"
+                    android:background="@drawable/admin_input_bg"
+                    android:textSize="15sp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:hint="@string/relationship_hint"
+                    android:singleLine="true" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/admin_section_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/media_info"
+                    android:textColor="@color/admin_text"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="10dp" />
+
+                <Button
+                    android:id="@+id/btnOpenContactMedia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:background="@drawable/button_secondary_bg"
+                    android:text="@string/contact_media_settings"
+                    android:textAllCaps="false"
+                    android:textColor="@color/admin_text"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:id="@+id/tvContactMediaSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:includeFontPadding="false"
+                    android:text="@string/contact_media_summary_empty"
+                    android:textColor="@color/admin_text_muted"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnSaveContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:background="@drawable/button_primary_bg"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp" />
+
+            <Button
+                android:id="@+id/btnDeleteContact"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="44dp"
+                android:background="@drawable/button_danger_bg"
+                android:text="@string/delete_contact"
+                android:textAllCaps="false"
+                android:textColor="@color/danger"
+                android:textSize="15sp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

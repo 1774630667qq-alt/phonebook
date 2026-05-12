@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#FF6B35</color>
-    <color name="primary_dark">#CC552A</color>
-    <color name="accent">#FFB347</color>
+    <color name="primary">#FF7A3D</color>
+    <color name="primary_dark">#D85D28</color>
+    <color name="accent">#FFC35A</color>
     <color name="background_dark">#1A1A2E</color>
     <color name="surface">#16213E</color>
     <color name="on_surface">#E94560</color>
@@ -10,18 +10,18 @@
     <color name="admin_input">#0B263D</color>
     <color name="admin_input_stroke">#2D6D88</color>
     <color name="admin_button_secondary">#234B68</color>
-    <color name="danger">#D9475C</color>
-    <color name="admin_page">#F4F7FA</color>
+    <color name="danger">#D83F57</color>
+    <color name="admin_page">#FBFDFF</color>
     <color name="admin_panel">#FFFFFF</color>
-    <color name="admin_panel_stroke">#D9E2EA</color>
-    <color name="admin_text">#172433</color>
-    <color name="admin_text_muted">#657789</color>
-    <color name="admin_field">#F8FAFC</color>
-    <color name="admin_field_stroke">#C9D6E2</color>
-    <color name="admin_primary">#176B87</color>
-    <color name="admin_primary_pressed">#0F536A</color>
-    <color name="admin_secondary_pressed">#E7EEF5</color>
-    <color name="admin_danger_bg">#FFF2F4</color>
+    <color name="admin_panel_stroke">#E6EEF5</color>
+    <color name="admin_text">#102033</color>
+    <color name="admin_text_muted">#6B7A89</color>
+    <color name="admin_field">#FFFFFF</color>
+    <color name="admin_field_stroke">#DDE8F1</color>
+    <color name="admin_primary">#087FA3</color>
+    <color name="admin_primary_pressed">#066580</color>
+    <color name="admin_secondary_pressed">#F1F7FB</color>
+    <color name="admin_danger_bg">#FFF7F8</color>
     <color name="text_primary">#FFFFFF</color>
     <color name="text_secondary">#B0B0B0</color>
     <color name="admin_background">#0F3460</color>

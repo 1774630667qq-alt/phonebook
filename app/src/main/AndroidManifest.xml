@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
     <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
     <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
@@ -42,6 +43,16 @@
 
         <activity
             android:name=".ui.admin.ContactEditActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Phonebook" />
+
+        <activity
+            android:name=".ui.admin.ContactMediaActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Phonebook" />
+
+        <activity
+            android:name=".ui.admin.PhotoDrawerActivity"
             android:exported="false"
             android:theme="@style/Theme.Phonebook" />
 
