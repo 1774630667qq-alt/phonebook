@@ -8,7 +8,8 @@
         android:id="@+id/contactVideoView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center" />
+        android:layout_gravity="center"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/contactImageView"
@@ -17,5 +18,51 @@
         android:layout_gravity="center"
         android:scaleType="centerCrop"
         android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/contactDefaultView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/contact_default_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="32dp">
+
+        <TextView
+            android:id="@+id/tvContactDefaultInitial"
+            android:layout_width="132dp"
+            android:layout_height="132dp"
+            android:background="@drawable/contact_avatar_bg"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="+"
+            android:textColor="@color/admin_primary"
+            android:textSize="72sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="22dp" />
+
+        <TextView
+            android:id="@+id/tvContactDefaultName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/contact_default_name"
+            android:textColor="@color/text_primary"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/tap_to_call"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:alpha="0.78" />
+
+    </LinearLayout>
 
 </FrameLayout>

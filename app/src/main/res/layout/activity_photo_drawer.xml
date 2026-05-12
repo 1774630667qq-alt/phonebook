@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/admin_page">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@color/admin_panel">
+
+        <Button
+            android:id="@+id/btnClosePhotoDrawerPage"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/button_secondary_bg"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:textColor="@color/admin_primary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tvPhotoDrawerPageTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/photo_drawer_title"
+            android:textColor="@color/admin_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDonePhotoDrawerPage"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/button_primary_bg"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@color/admin_panel">
+
+        <Button
+            android:id="@+id/btnPhotoDrawerPageAdd"
+            android:layout_width="92dp"
+            android:layout_height="34dp"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:background="@drawable/button_primary_bg"
+            android:text="@string/add_photos"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnPhotoDrawerPageDelete"
+            android:layout_width="0dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:minHeight="0dp"
+            android:minWidth="0dp"
+            android:background="@drawable/button_danger_bg"
+            android:text="@string/delete_selected_photos"
+            android:textAllCaps="false"
+            android:textColor="@color/danger"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/btnPhotoDrawerPageColumnsMinus"
+            android:layout_width="36dp"
+            android:layout_height="34dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/button_secondary_bg"
+            android:text="-"
+            android:textAllCaps="false"
+            android:textColor="@color/admin_primary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvPhotoDrawerPageColumns"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/photo_columns"
+            android:textColor="@color/admin_text_muted"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btnPhotoDrawerPageColumnsPlus"
+            android:layout_width="36dp"
+            android:layout_height="34dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/button_secondary_bg"
+            android:text="+"
+            android:textAllCaps="false"
+            android:textColor="@color/admin_primary"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPhotoDrawerPage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <TextView
+            android:id="@+id/tvPhotoDrawerPageEmpty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/photo_drawer_empty"
+            android:textColor="@color/admin_text_muted"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</LinearLayout>

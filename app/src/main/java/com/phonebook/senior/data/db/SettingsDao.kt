@@ -42,4 +42,16 @@ interface SettingsDao {
 
     @Query("UPDATE app_settings SET appearanceMode = :mode WHERE id = 1")
     suspend fun updateAppearanceMode(mode: String)
+
+    @Query("UPDATE app_settings SET fontSizeMode = :mode WHERE id = 1")
+    suspend fun updateFontSizeMode(mode: String)
+
+    @Query("UPDATE app_settings SET easyModeEnabled = :enabled WHERE id = 1")
+    suspend fun updateEasyMode(enabled: Boolean)
+
+    @Query("UPDATE app_settings SET easyModeSwipeHintEnabled = :enabled WHERE id = 1")
+    suspend fun updateEasyModeSwipeHint(enabled: Boolean)
+
+    @Query("UPDATE app_settings SET preferredSimAccount = :account WHERE id = 1")
+    suspend fun updatePreferredSimAccount(account: String)
 }

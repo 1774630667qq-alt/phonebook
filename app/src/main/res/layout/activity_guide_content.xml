@@ -1,202 +1,339 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/admin_page"
-    android:clipToPadding="false"
-    android:fillViewport="true"
-    android:overScrollMode="never"
-    android:paddingStart="20dp"
-    android:paddingTop="18dp"
-    android:paddingEnd="20dp"
-    android:paddingBottom="22dp"
-    android:scrollbars="none">
+    android:orientation="vertical"
+    android:background="@color/admin_page">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="52dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:background="@color/admin_panel">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="54dp"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:layout_marginBottom="16dp">
+        <Button
+            android:id="@+id/btnCloseGuideContent"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/button_secondary_bg"
+            android:text="@string/back"
+            android:textAllCaps="false"
+            android:textColor="@color/admin_primary"
+            android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/btnCloseGuideContent"
-                android:layout_width="82dp"
-                android:layout_height="42dp"
-                android:background="@drawable/button_secondary_bg"
-                android:text="@string/back"
-                android:textAllCaps="false"
-                android:textColor="@color/admin_primary"
-                android:textSize="15sp" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="end"
-                android:text="@string/guide_content"
-                android:textColor="@color/admin_text"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/admin_section_bg"
-            android:padding="12dp"
-            android:layout_marginBottom="14dp">
+            android:layout_weight="1"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/guide_content"
+            android:textColor="@color/admin_text"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/switchGuideContent"
-                android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:text="@string/guide_content_enabled"
-                android:textColor="@color/admin_text"
-                android:textSize="17sp"
-                android:textStyle="bold" />
+        <Button
+            android:id="@+id/btnDoneGuideContent"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:background="@drawable/button_primary_bg"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
-        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:paddingStart="12dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="14dp"
+        android:scrollbars="none">
 
         <LinearLayout
-            android:id="@+id/layoutGuideOptions"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <RadioGroup
-                android:id="@+id/radioGuideMode"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/admin_section_bg"
-                android:padding="12dp"
-                android:layout_marginBottom="14dp">
-
-                <RadioButton
-                    android:id="@+id/radioGuidePhoto"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="1"
-                    android:text="@string/guide_memory_photo"
-                    android:textColor="@color/admin_text"
-                    android:textSize="16sp" />
-
-                <RadioButton
-                    android:id="@+id/radioGuideVideo"
-                    android:layout_width="0dp"
-                    android:layout_height="48dp"
-                    android:layout_weight="1"
-                    android:text="@string/guide_family_video"
-                    android:textColor="@color/admin_text"
-                    android:textSize="16sp" />
-
-            </RadioGroup>
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="220dp"
-                android:background="@drawable/admin_section_bg"
-                android:padding="10dp"
-                android:layout_marginBottom="14dp">
-
-                <ImageView
-                    android:id="@+id/imgGuidePreview"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:scaleType="centerCrop"
-                    android:visibility="gone" />
-
-                <VideoView
-                    android:id="@+id/videoGuidePreview"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:visibility="gone" />
-
-                <TextView
-                    android:id="@+id/tvGuidePreviewPlaceholder"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:text="@string/preview"
-                    android:textColor="@color/admin_text_muted"
-                    android:textSize="18sp" />
-
-            </FrameLayout>
-
             <LinearLayout
-                android:id="@+id/layoutPhotoMode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:background="@drawable/admin_section_bg"
-                android:padding="16dp"
-                android:layout_marginBottom="14dp">
+                android:paddingStart="10dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="6dp"
+                android:layout_marginBottom="10dp">
 
-                <Button
-                    android:id="@+id/btnSelectGuideImage"
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/switchGuideContent"
                     android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:background="@drawable/button_secondary_bg"
-                    android:text="@string/select_image"
-                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:text="@string/guide_content_enabled"
                     android:textColor="@color/admin_text"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="12dp" />
-
-                <Button
-                    android:id="@+id/btnSelectGuideAudio"
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:background="@drawable/button_secondary_bg"
-                    android:text="@string/select_audio"
-                    android:textAllCaps="false"
-                    android:textColor="@color/admin_text"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="12dp" />
-
-                <Button
-                    android:id="@+id/btnPlayGuideAudio"
-                    android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:background="@drawable/button_primary_bg"
-                    android:text="@string/play_audio"
-                    android:textAllCaps="false"
-                    android:textColor="@color/text_primary"
-                    android:textSize="16sp" />
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layoutVideoMode"
+                android:id="@+id/layoutGuideOptions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/admin_section_bg"
-                android:padding="16dp">
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/radioGuideMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@drawable/admin_section_bg"
+                    android:padding="10dp"
+                    android:layout_marginBottom="10dp">
+
+                    <RadioButton
+                        android:id="@+id/radioGuidePhoto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="38dp"
+                        android:layout_weight="1"
+                        android:text="@string/guide_memory_photo"
+                        android:textColor="@color/admin_text"
+                        android:textSize="14sp" />
+
+                    <RadioButton
+                        android:id="@+id/radioGuideVideo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:minHeight="38dp"
+                        android:layout_weight="1"
+                        android:text="@string/guide_family_video"
+                        android:textColor="@color/admin_text"
+                        android:textSize="14sp" />
+
+                </RadioGroup>
+
+                <FrameLayout
+                    android:id="@+id/layoutGuideMediaPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="190dp"
+                    android:background="@drawable/admin_section_bg"
+                    android:padding="8dp"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/imgGuidePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+                    <VideoView
+                        android:id="@+id/videoGuidePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/tvGuidePreviewPlaceholder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="@string/contact_media_default_preview"
+                        android:textColor="@color/admin_text_muted"
+                        android:textSize="15sp" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutPhotoMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/admin_section_bg"
+                    android:padding="12dp"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btnSelectGuideImages"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:background="@drawable/button_secondary_bg"
+                        android:text="@string/select_images"
+                        android:textAllCaps="false"
+                        android:textColor="@color/admin_text"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:id="@+id/tvGuidePhotoCount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/contact_media_default_preview"
+                        android:textColor="@color/admin_text_muted"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/photo_display_mode"
+                        android:textColor="@color/admin_text"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGuidePhotoDisplayMode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="8dp">
+
+                        <RadioButton
+                            android:id="@+id/radioGuidePhotoCarousel"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="36dp"
+                            android:layout_weight="1"
+                            android:text="@string/photo_display_carousel"
+                            android:textColor="@color/admin_text"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/radioGuidePhotoRandom"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:minHeight="36dp"
+                            android:layout_weight="1"
+                            android:text="@string/photo_display_random"
+                            android:textColor="@color/admin_text"
+                            android:textSize="14sp" />
+
+                    </RadioGroup>
+
+                    <TextView
+                        android:id="@+id/tvGuideCarouselIntervalLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:includeFontPadding="false"
+                        android:text="@string/carousel_interval_seconds"
+                        android:textColor="@color/admin_text_muted"
+                        android:textSize="12sp"
+                        android:layout_marginBottom="5dp" />
+
+                    <EditText
+                        android:id="@+id/etGuideCarouselInterval"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="42dp"
+                        android:background="@drawable/admin_input_bg"
+                        android:inputType="number"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:singleLine="true"
+                        android:text="9"
+                        android:textColor="@color/admin_text"
+                        android:textColorHint="@color/admin_text_muted"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/btnOpenGuidePhotoDrawer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:background="@drawable/button_secondary_bg"
+                        android:text="@string/manage_photos"
+                        android:textAllCaps="false"
+                        android:textColor="@color/admin_text"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/btnSelectGuideAudio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:background="@drawable/button_secondary_bg"
+                        android:text="@string/select_audio"
+                        android:textAllCaps="false"
+                        android:textColor="@color/admin_text"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <Button
+                        android:id="@+id/btnPlayGuideAudio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:background="@drawable/button_primary_bg"
+                        android:text="@string/play_audio"
+                        android:textAllCaps="false"
+                        android:textColor="@color/text_primary"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutVideoMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/admin_section_bg"
+                    android:padding="12dp"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btnSelectGuideVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="44dp"
+                        android:background="@drawable/button_secondary_bg"
+                        android:text="@string/select_video"
+                        android:textAllCaps="false"
+                        android:textColor="@color/admin_text"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
 
                 <Button
-                    android:id="@+id/btnSelectGuideVideo"
+                    android:id="@+id/btnClearGuideContent"
                     android:layout_width="match_parent"
-                    android:layout_height="54dp"
-                    android:background="@drawable/button_secondary_bg"
-                    android:text="@string/select_video"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:background="@drawable/button_danger_bg"
+                    android:text="@string/clear_media"
                     android:textAllCaps="false"
-                    android:textColor="@color/admin_text"
-                    android:textSize="16sp" />
+                    android:textColor="@color/danger"
+                    android:textSize="15sp" />
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
-</ScrollView>
+</LinearLayout>

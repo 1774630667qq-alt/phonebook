@@ -7,28 +7,30 @@
     android:background="@drawable/contact_item_bg"
     android:clickable="true"
     android:focusable="true"
-    android:minHeight="76dp"
-    android:paddingStart="14dp"
-    android:paddingTop="12dp"
-    android:paddingEnd="14dp"
-    android:paddingBottom="12dp"
-    android:layout_marginBottom="10dp">
+    android:minHeight="64dp"
+    android:paddingStart="10dp"
+    android:paddingTop="9dp"
+    android:paddingEnd="10dp"
+    android:paddingBottom="9dp"
+    android:layout_marginBottom="8dp">
 
     <TextView
         android:id="@+id/tvContactAvatar"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:background="@drawable/contact_avatar_bg"
         android:gravity="center"
+        android:includeFontPadding="false"
         android:textColor="@color/admin_primary"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:textStyle="bold"
-        android:layout_marginEnd="14dp" />
+        android:layout_marginEnd="10dp" />
 
     <LinearLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
+        android:layout_marginEnd="8dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -43,9 +45,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ellipsize="end"
+                android:includeFontPadding="false"
                 android:maxLines="1"
                 android:textColor="@color/admin_text"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -53,10 +56,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
+                android:includeFontPadding="false"
                 android:maxLines="1"
                 android:textColor="@color/admin_text_muted"
-                android:textSize="14sp"
-                android:layout_marginStart="8dp" />
+                android:textSize="12sp"
+                android:layout_marginStart="6dp" />
 
         </LinearLayout>
 
@@ -64,9 +68,47 @@
             android:id="@+id/tvContactPhone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:includeFontPadding="false"
             android:textColor="@color/admin_text_muted"
-            android:textSize="15sp"
-            android:layout_marginTop="5dp" />
+            android:textSize="13sp"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnEditContact"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/button_secondary_bg"
+            android:text="@string/edit"
+            android:textAllCaps="false"
+            android:textColor="@color/admin_primary"
+            android:textSize="12sp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btnDeleteContactQuick"
+            android:layout_width="54dp"
+            android:layout_height="32dp"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingStart="0dp"
+            android:paddingEnd="0dp"
+            android:background="@drawable/button_danger_bg"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textColor="@color/danger"
+            android:textSize="12sp" />
 
     </LinearLayout>
 
