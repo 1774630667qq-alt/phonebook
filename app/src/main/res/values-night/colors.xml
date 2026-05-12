@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF8A5B</color>
+    <color name="primary_dark">#D9663B</color>
+    <color name="accent">#FFD27A</color>
+    <color name="background_dark">#05080C</color>
+    <color name="surface">#151C24</color>
+    <color name="on_surface">#FF6F82</color>
+    <color name="admin_surface">#151C24</color>
+    <color name="admin_input">#101820</color>
+    <color name="admin_input_stroke">#314452</color>
+    <color name="admin_button_secondary">#1B2732</color>
+    <color name="danger">#FF6B7C</color>
+    <color name="admin_page">#0A1016</color>
+    <color name="admin_panel">#121A22</color>
+    <color name="admin_panel_stroke">#263542</color>
+    <color name="admin_text">#F3F7FA</color>
+    <color name="admin_text_muted">#9AA9B7</color>
+    <color name="admin_field">#0D151D</color>
+    <color name="admin_field_stroke">#344655</color>
+    <color name="admin_primary">#2D8EAA</color>
+    <color name="admin_primary_pressed">#23748C</color>
+    <color name="admin_secondary_pressed">#20303C</color>
+    <color name="admin_danger_bg">#2A1118</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#BAC4CC</color>
+    <color name="admin_background">#0A1016</color>
+    <color name="swipe_hint_bg">#80000000</color>
+    <color name="overlay_dark">#50000000</color>
+</resources>

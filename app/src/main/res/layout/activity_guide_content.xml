@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/admin_page"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:paddingStart="20dp"
+    android:paddingTop="18dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="22dp"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnCloseGuideContent"
+                android:layout_width="82dp"
+                android:layout_height="42dp"
+                android:background="@drawable/button_secondary_bg"
+                android:text="@string/back"
+                android:textAllCaps="false"
+                android:textColor="@color/admin_primary"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="@string/guide_content"
+                android:textColor="@color/admin_text"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/admin_section_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="14dp">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchGuideContent"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="@string/guide_content_enabled"
+                android:textColor="@color/admin_text"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutGuideOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/radioGuideMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/admin_section_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="14dp">
+
+                <RadioButton
+                    android:id="@+id/radioGuidePhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/guide_memory_photo"
+                    android:textColor="@color/admin_text"
+                    android:textSize="16sp" />
+
+                <RadioButton
+                    android:id="@+id/radioGuideVideo"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:text="@string/guide_family_video"
+                    android:textColor="@color/admin_text"
+                    android:textSize="16sp" />
+
+            </RadioGroup>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/admin_section_bg"
+                android:padding="10dp"
+                android:layout_marginBottom="14dp">
+
+                <ImageView
+                    android:id="@+id/imgGuidePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone" />
+
+                <VideoView
+                    android:id="@+id/videoGuidePreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tvGuidePreviewPlaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/preview"
+                    android:textColor="@color/admin_text_muted"
+                    android:textSize="18sp" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutPhotoMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/admin_section_bg"
+                android:padding="16dp"
+                android:layout_marginBottom="14dp">
+
+                <Button
+                    android:id="@+id/btnSelectGuideImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/button_secondary_bg"
+                    android:text="@string/select_image"
+                    android:textAllCaps="false"
+                    android:textColor="@color/admin_text"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/btnSelectGuideAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/button_secondary_bg"
+                    android:text="@string/select_audio"
+                    android:textAllCaps="false"
+                    android:textColor="@color/admin_text"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="12dp" />
+
+                <Button
+                    android:id="@+id/btnPlayGuideAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/button_primary_bg"
+                    android:text="@string/play_audio"
+                    android:textAllCaps="false"
+                    android:textColor="@color/text_primary"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutVideoMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/admin_section_bg"
+                android:padding="16dp">
+
+                <Button
+                    android:id="@+id/btnSelectGuideVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:background="@drawable/button_secondary_bg"
+                    android:text="@string/select_video"
+                    android:textAllCaps="false"
+                    android:textColor="@color/admin_text"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

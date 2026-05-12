@@ -1,0 +1,21 @@
+@echo off
+echo ========================================
+echo Phonebook - Elderly Contact App
+echo ========================================
+echo.
+echo This project requires Android SDK to build.
+echo.
+echo Option 1: Open in Android Studio (Recommended)
+echo   - Download from: https://developer.android.com/studio
+echo   - File ^> Open ^> Select this folder
+echo.
+echo Option 2: VSCode with Gradle wrapper
+echo   - Ensure ANDROID_HOME is set to your Android SDK path
+echo   - Run: gradlew.bat assembleDebug
+echo   - Output APK: app\build\outputs\apk\debug\app-debug.apk
+echo.
+echo Prerequisites:
+echo   - Android SDK (compileSdk 34)
+echo   - Java 17 (detected)
+echo ========================================
+pause
